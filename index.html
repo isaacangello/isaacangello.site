@@ -4,24 +4,142 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <title>Vite + Alpine</title>
+  <link rel="icon" type="image/png" href="../isc.png" />
+  <link rel="stylesheet" href="style.css">
+  <title>Isaac Castro Dev</title>
 </head>
 
-<body>
-  <div id="app" x-data="app">
-    <a href="https://vitejs.dev" target="_blank">
-      <img :src="viteLogo" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://alpinejs.dev/" target="_blank">
-      <img :src="alpineLogo" class="logo alpine" alt="Alpine logo" />
-    </a>
-    <h1>Hello Vite + Alpine!</h1>
-    <div class="card">
-      <button id="counter" type="button" @click="count++" x-text="`count is ${count}`"></button>
-    </div>
-    <p class="read-the-docs">Click on the Vite and Alpine logos to learn more</p>
+<body class="bg-gray-50">
+<div x-data="app"> 
+    <nav class="h-16 flex flex-col  justify-center" aria-label="large">       
+        <div class="flex items-center justify-around">
+            <div class="flex items-center justify-end space-x-2">
+                <div class="bg-amber-400 rounded-full w-6 h-6"></div>
+                <div>
+                    <a class="cursor-pointer" @click="loadPage('home.html')">
+                        <span class="text-2xl font-bold">Isaac Castro</span>
+                        <span class="font-normal">Desenvolvedor Web</span>
+                    </a>
+                </div>
+            </div>
+            <div class="">
+                <ul class="hidden md:flex space-x-3">
+                    <li class="text-center border-r border-black px-5"><a class="cursor-pointer hover:text-amber-900" x-on:click="loadPage('curriculo.html')" >Curriculo</a></li>
+                    <li class="text-center border-r border-black px-5"><a class="cursor-pointer hover:text-amber-900" x-on:click="loadPage('projetos.html')">Projetos</a></li>
+                    <li class="text-center  px-5"><a class="cursor-pointer hover:text-amber-900" x-on:click="loadPage('contato.html')">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav class="md:hidden flex flex-col justify-center items-center" aria-label="mobile">
+        <ul class="flex justify-center items-center space-x-3">
+            <li class="text-center border-r border-black px-5"><a class="cursor-pointer hover:text-amber-900" x-on:click="loadPage('curriculo.html')" >Curriculo</a></li>
+            <li class="text-center border-r border-black px-5"><a class="cursor-pointer hover:text-amber-900" x-on:click="loadPage('projetos.html')">Projetos</a></li>
+            <li class="text-center  px-5"><a class="cursor-pointer hover:text-amber-900" x-on:click="loadPage('contato.html')">Contato</a></li>
+</ul>
+    </nav>
+    <div class="flex flex-col h-screen">
+  <div id="app"  x-ref="appContent" class="w-full h-full flex flex-col items-center justify-center">
+        
+        
+        <div role="status" class="mt-2 space-y-2.5 animate-pulse w-full max-w-7xl">
+            <div class="flex items-center w-full ">
+                <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-3/12"></div>
+                <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-2/12"></div>
+                <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+            </div>
+            <div class="flex items-center w-full">
+                <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-full"></div>
+                        <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+                <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-2/12"></div>
+            </div>
+            <div class="flex items-center w-full">
+                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+                <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-8/12"></div>
+                <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+            </div>
+            <div class="flex items-center w-full">
+                <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full"></div>
+                        <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+                <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-2/12"></div>
+            </div>
+            <div class="flex items-center w-full ">
+                <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-3/12"></div>
+                <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-2/12"></div>
+                <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full"></div>
+            </div>
+            <div class="flex items-center w-full ">
+                <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+                <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-8/12"></div>
+                <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+            </div>
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div role="status" class=" space-y-2.5 animate-pulse w-full max-w-7xl">
+            <div class="flex items-center w-full ">
+                <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-3/12"></div>
+                <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-2/12"></div>
+                <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+            </div>
+            <div class="flex items-center w-full">
+                <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-full"></div>
+                        <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+                <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-2/12"></div>
+            </div>
+            <div class="flex items-center w-full">
+                <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+                <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-8/12"></div>
+                <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+            </div>
+            <div class="flex items-center w-full">
+                <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full"></div>
+                        <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+                <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-2/12"></div>
+            </div>
+            <div class="flex items-center w-full ">
+                <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-3/12"></div>
+                <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-2/12"></div>
+                <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full"></div>
+            </div>
+            <div class="flex items-center w-full ">
+                <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+                <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-8/12"></div>
+                <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+            </div>
+            <span class="sr-only">Loading...</span>
+        </div>
+        
+        
+        
+  
   </div>
+  <footer class="h-16 w-full flex items-center justify-around bottom-0">
+    <div class=" w-full  h-full block md:grid md:grid-cols-4  text-start border-t border-gray-200">
+        <div class="p-5 md:p-10">
+            <span class="font-bold">Telefone</span><br>
+            <span class="font-normal text-gray-700">(21) 99917-3224</span>
+        </div>
+        <div class="p-5 md:p-10">
+            <span class="font-bold">Email</span><br>
+            <span class="font-normal text-gray-700">isaacangello@inf.ufpel.edu.br</span>
+        </div>
+        <div class="p-5 md:p-10">
+            <span class="font-bold">Me siga</span><br>
+            <a href="" class="text-lg mr-2">
+                <i class="fa-brands fa-x-twitter"></i>                
+            </a>
+            <a href="" class="text-lg">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+        <div class="p-5 md:p-10 font-normal text-gray-700">
+                &copy; <span id='copyYear'></span> Isaac Castro <br>
+                created with Alpine JS and Vite 
+        </div>
+    </div>
+  </footer>
+</div>
+</div>
   <script type="module" src="/main.js"></script>
 </body>
 

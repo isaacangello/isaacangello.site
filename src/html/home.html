@@ -1,0 +1,33 @@
+<div class="w-full md:max-w-5xl md:flex items-center justify-center " >
+      <div class="w-full sm:mt-1 sm:flex items-center justify-center text-center animate__animated animate__slideInUp animate__faster">
+        <img src="./me.jpg" alt="me.jpg" class="rounded-full align-middle self-center mx-auto" >
+      </div>      
+      <div class=" flex flex-col items-stretch justify-center pl-5 space-y-3 animate__animated animate__slideInUp">
+        <div><p class="font-extrabold text-7xl text-center md:text-start">Olá!</p></div>
+        <div>
+          <h2 class="font-bold text-xl text-center md:text-start">Um pouco sobre mim</h2>
+          <p class="text-center md:text-justify font-normal text-xs mt-2 ">
+            Entusiasta das tecnologias Web, no mercado de TI<br> desde 2001, estou em constante aprendizado das novas <br>tecnologias e desenvolvendo produtos e serviços robustos de seguros.  
+          </p>
+        </div>
+        <div class="mt-2">
+          <ul class="flex items-center justify-center space-x-3 mx-auto">
+            <li class="text-center">              
+              <button x-on:click="loadPage('curriculo.html')" type="button" class=" cursor-pointer text-gray-900 border border-gray-900 br bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-amber-300 dark:focus:ring-amber-800 shadow-lg shadow-amber-500/50 dark:shadow-lg dark:shadow-amber-800/80 font-medium rounded-full text-sm p-4 md:p-12 text-center me-2 mb-2">
+                Curriculo
+              </button>
+            </li>
+            <li class="text-center ">              
+              <button @click="loadPage('projetos.html')" type="button" class="cursor-pointer text-gray-900 border border-gray-900 bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-full text-sm p-4 md:p-12 text-center me-2 mb-2">
+                Projetos
+              </button>
+            </li>
+            <li class="text-center">              
+              <button @click="loadPage('contato.html')" type="button" class="cursor-pointer text-gray-900 border border-gray-900 bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-full  text-sm p-4 md:p-12 text-center me-2 mb-2">
+                Contato
+              </button>
+            </li>
+        </ul>
+      </div>
+    </div>
+</div>

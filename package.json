@@ -12,6 +12,9 @@
     "vite": "^5.1.4"
   },
   "dependencies": {
-    "alpinejs": "^3.13.5"
+    "@tailwindcss/vite": "^4.1.10",
+    "alpinejs": "^3.13.5",
+    "animate.css": "^4.1.1",
+    "tailwindcss": "^4.1.10"
   }
 }
