@@ -22,5 +22,5 @@ jobs:
         server: ${{ secrets.TOP3_HOST }}
         username: ${{ secrets.TOP3_USER }}
         password: ${{ secrets.TOP3_PASSWORD }}
-        local-dir: /public_html
+        local-dir: ./public_html/
         server-dir: /public_html/
