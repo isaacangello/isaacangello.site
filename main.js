@@ -1,6 +1,6 @@
 import "./src/fa6/pro/css/all.css"
 import "./src/fa6/pro/js/all"
-import './style.css';
+import './src/css/style.css';
 import 'animate.css'
 import Alpine from 'alpinejs';
 
