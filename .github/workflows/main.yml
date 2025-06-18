@@ -1,0 +1,26 @@
+on:
+    push:
+        branches:
+            - main
+name: 🚀 Deploy from main
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+
+    - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+      run: |
+        npm ci
+        npm run build
+
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.TOP3_HOST }}
+        username: ${{ secrets.TOP3_USER }}
+        password: ${{ secrets.TOP3_PASSWORD }}
+        local-dir: /public_html
+        server-dir: /public_html/
