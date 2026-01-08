@@ -14,7 +14,7 @@ Alpine.data('app', () => ({
     })
   },
   init(){
-    this.loadPage('curriculo.html')
+    this.loadPage('home.html')
   }
 })
 )
