@@ -1,33 +1,52 @@
-# vite-alpine
+# Isaac Castro — Site Pessoal
 
-This is another [vite template](https://vitejs.dev/guide/#trying-vite-online) based on the vanilla template with added [alpinejs](https://alpinejs.dev/)
+Site pessoal / portfólio de [Isaac Castro](https://isaacangello.dev), desenvolvedor web fullstack.
 
-[![template](screenshot.png)](https://dvd101x.github.io/vite-alpine)
+## Stack
 
-Test this template in [github-pages](https://dvd101x.github.io/vite-alpine)
+| Camada | Tecnologia |
+|--------|-----------|
+| Bundler | Vite 5 |
+| Reatividade | Alpine.js 3 |
+| Estilo | Tailwind CSS 4 |
+| Animações | Animate.css |
+| Ícones | SVGs inline |
 
-# to start
+## Estrutura
 
-Run the following commands
-
-Install dependencies once:
 ```
-npm install
-```
-Start dev server
-```
-npm run dev
-```
-
-Build a bundle (generated in the dist folder):
-```
-npm run dist
+src/
+├── html/           # Páginas HTML (carregadas via router)
+├── css/            # Estilos + font-face + Tailwind
+├── fonts/          # Fontes locais (Work Sans, DIN Next, Helvetica)
+├── img/            # Imagens (screenshots de projetos, avatar)
+└── posts/          # Posts do blog (Markdown)
+scripts/            # Scripts CLI (new-post.sh, generate-index.js)
+public_html/        # Build output (Vite)
 ```
 
-# how was this made?
+## Rotas
 
-1. Follow the steps to create a `vanilla` project 
-  https://vitejs.dev/guide/#scaffolding-your-first-vite-project 
-2. Follow the steps to install alpinejs as a module
-  https://alpinejs.dev/essentials/installation#as-a-module
-3. Modify the project to use Alpine instead of vanilla javascript.
+| URL | Página |
+|-----|--------|
+| `/#/home` | Home (default) |
+| `/#/curriculo` | Currículo |
+| `/#/projetos` | Projetos |
+| `/#/contato` | Contato |
+| `/#/blog` | Blog (em desenvolvimento) |
+
+## Desenvolvimento
+
+```bash
+npm run dev          # Servidor de desenvolvimento
+npm run build        # Build para produção (saída em public_html/)
+```
+
+## Projetos em Destaque
+
+- [P4O — Process 4 Order](https://p4o.free.nf) — Gestão de ordens de serviço
+- [Oportunidade & Ajuda](https://oportunidadeeajuda.com/dev) — Portal para imigrantes brasileiros nos EUA
+
+## Licença
+
+MIT
