@@ -26,6 +26,7 @@ export default defineConfig({
         const outDir = resolve(__dirname, 'public_html')
 
         copyDir(resolve(__dirname, 'src/html'), join(outDir, 'src/html'))
+        copyDir(resolve(__dirname, 'src/img'), join(outDir, 'src/img'))
 
         const postsDest = join(outDir, 'src', 'posts')
         copyDir(resolve(__dirname, 'src/posts'), postsDest)
