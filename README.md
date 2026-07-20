@@ -59,6 +59,10 @@ npm run build                        # Build para produção (saída em public_h
 - [P4O — Process 4 Order](https://p4o.free.nf) — Gestão de ordens de serviço
 - [Oportunidade & Ajuda](https://oportunidadeeajuda.com/dev) — Portal para imigrantes brasileiros nos EUA
 
+## Créditos
+
+O blog foi inspirado no [AkitaOnRails](https://github.com/akitaonrails/akitaonrails.github.io) — blog pessoal do [Fabio Akita](https://github.com/akitaonrails).
+
 ## Licença
 
 MIT
