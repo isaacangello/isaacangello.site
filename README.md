@@ -45,6 +45,8 @@ npm run build                        # Build para produção (saída em public_h
 ./scripts/deploy.sh                  # Deploy manual via FTP
 ```
 
+> [📝 Documentação completa do blog →](BLOG.md)
+
 ## Deploy
 
 | Método | Gatilho | Destino |
