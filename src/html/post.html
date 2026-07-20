@@ -1,0 +1,18 @@
+<div x-data="blogPost()" class="w-full md:max-w-4xl mx-auto px-6 py-6 animate__animated animate__fadeInUp animate__faster">
+    <button @click="$store.router.navigate('blog')" class="text-sm text-amber-600 hover:underline mb-4 cursor-pointer">&larr; Voltar para o blog</button>
+    <template x-if="!post">
+        <p class="text-gray-500">Post não encontrado.</p>
+    </template>
+    <template x-if="post">
+        <div>
+            <h1 class="text-3xl font-bold mb-2" x-text="post.title"></h1>
+            <div class="flex items-center gap-3 text-sm text-gray-500 mb-6">
+                <span x-text="post.date"></span>
+                <template x-for="tag in post.tags" :key="tag">
+                    <span class="bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded-full" x-text="tag"></span>
+                </template>
+            </div>
+            <div class="prose prose-amber max-w-none" x-html="post.body"></div>
+        </div>
+    </template>
+</div>

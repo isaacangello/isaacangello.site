@@ -30,17 +30,29 @@ public_html/        # Build output (Vite)
 | URL | Página |
 |-----|--------|
 | `/#/home` | Home (default) |
+| `/#/blog` | Blog |
+| `/#/blog/:slug` | Post individual |
 | `/#/curriculo` | Currículo |
 | `/#/projetos` | Projetos |
 | `/#/contato` | Contato |
-| `/#/blog` | Blog (em desenvolvimento) |
 
-## Desenvolvimento
+## Scripts
 
 ```bash
-npm run dev          # Servidor de desenvolvimento
-npm run build        # Build para produção (saída em public_html/)
+npm run dev                          # Servidor de desenvolvimento
+npm run build                        # Build para produção (saída em public_html/)
+./scripts/new-post.sh "Título"       # Criar novo post no blog
+./scripts/deploy.sh                  # Deploy manual via FTP
 ```
+
+## Deploy
+
+| Método | Gatilho | Destino |
+|--------|---------|---------|
+| **Automático** | Push na branch `main` (GitHub Actions) | InfinityFree via FTP |
+| **Manual** | `./scripts/deploy.sh` | InfinityFree via lftp |
+
+**Secrets do GitHub:** `INFINITY_FREE_HOST`, `INFINITY_FREE_USER`, `INFINITY_FREE_PASSWORD`
 
 ## Projetos em Destaque
 

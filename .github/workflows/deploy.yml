@@ -1,0 +1,36 @@
+on:
+  push:
+    branches:
+      - main
+
+name: Deploy to InfinityFree
+
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.INFINITY_FREE_HOST }}
+          username: ${{ secrets.INFINITY_FREE_USER }}
+          password: ${{ secrets.INFINITY_FREE_PASSWORD }}
+          local-dir: ./public_html/
+          server-dir: /htdocs/
+          dangerous-clean-skip: true

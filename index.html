@@ -25,6 +25,7 @@
             <div class="">
                 <ul class="hidden md:flex space-x-3">
                     <li class="text-center border-r border-black px-5"><a class="cursor-pointer hover:text-amber-900" :class="{ 'text-amber-600 font-bold': $store.router.current === 'home' }" @click="$store.router.navigate('home')">Home</a></li>
+                    <li class="text-center border-r border-black px-5"><a class="cursor-pointer hover:text-amber-900" :class="{ 'text-amber-600 font-bold': $store.router.current === 'blog' }" @click="$store.router.navigate('blog')">Blog</a></li>
                     <li class="text-center border-r border-black px-5"><a class="cursor-pointer hover:text-amber-900" :class="{ 'text-amber-600 font-bold': $store.router.current === 'curriculo' }" @click="$store.router.navigate('curriculo')">Curriculo</a></li>
                     <li class="text-center border-r border-black px-5"><a class="cursor-pointer hover:text-amber-900" :class="{ 'text-amber-600 font-bold': $store.router.current === 'projetos' }" @click="$store.router.navigate('projetos')">Projetos</a></li>
                     <li class="text-center  px-5"><a class="cursor-pointer hover:text-amber-900" :class="{ 'text-amber-600 font-bold': $store.router.current === 'contato' }" @click="$store.router.navigate('contato')">Contato</a></li>
@@ -34,6 +35,7 @@
     </nav>
     <nav class="md:hidden flex flex-col justify-center items-center" aria-label="mobile">
         <ul class="flex justify-center items-center space-x-3">
+            <li class="text-center border-r border-black px-5"><a class="cursor-pointer hover:text-amber-900" :class="{ 'text-amber-600 font-bold': $store.router.current === 'blog' }" @click="$store.router.navigate('blog')">Blog</a></li>
             <li class="text-center border-r border-black px-5"><a class="cursor-pointer hover:text-amber-900" :class="{ 'text-amber-600 font-bold': $store.router.current === 'curriculo' }" @click="$store.router.navigate('curriculo')">Curriculo</a></li>
             <li class="text-center border-r border-black px-5"><a class="cursor-pointer hover:text-amber-900" :class="{ 'text-amber-600 font-bold': $store.router.current === 'projetos' }" @click="$store.router.navigate('projetos')">Projetos</a></li>
             <li class="text-center  px-5"><a class="cursor-pointer hover:text-amber-900" :class="{ 'text-amber-600 font-bold': $store.router.current === 'contato' }" @click="$store.router.navigate('contato')">Contato</a></li>

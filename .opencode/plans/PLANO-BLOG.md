@@ -69,14 +69,14 @@ Conteúdo em **Markdown** aqui...
 
 ## Status
 
-- [ ] `npm install marked --save-dev`
-- [ ] `scripts/new-post.sh`
-- [ ] `scripts/generate-index.js`
-- [ ] `src/posts/index.json` (gerado pelo script)
-- [ ] `src/posts/exemplo.md` (post de exemplo)
-- [ ] `src/html/blog.html` (listagem)
-- [ ] `src/html/post.html` (template de post)
-- [ ] Adicionar rota `/blog` e `/blog/:slug` no router
-- [ ] Adicionar link "Blog" na navbar
-- [ ] Plugin Vite copia `src/posts/` para `public_html/posts/`
-- [ ] Build + testar
+- [x] `npm install marked --save-dev`
+- [x] `scripts/new-post.sh`
+- [x] `scripts/generate-index.js`
+- [x] `src/posts/index.json` (gerado pelo script)
+- [x] `src/posts/exemplo.md` (post de exemplo)
+- [x] `src/html/blog.html` (listagem)
+- [x] `src/html/post.html` (template de post)
+- [x] Adicionar rota `/blog` e `/blog/:slug` no router
+- [x] Adicionar link "Blog" na navbar
+- [x] Plugin Vite copia `src/posts/` para `public_html/posts/`
+- [x] Build + testar

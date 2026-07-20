@@ -1,5 +1,22 @@
 # Changelog
 
+## v0.2.0 (2026-07-20)
+
+### Feat
+- **Blog pessoal:** Posts em Markdown com frontmatter, build converte para JSON via `marked`, Alpine.js renderiza no cliente
+- **Rotas `/blog` e `/#/blog/:slug`:** Listagem de posts com cards + template individual
+- **Navbar:** Link "Blog" adicionado entre Home e Currículo (desktop e mobile)
+- **Deploy automático:** GitHub Actions dispara na branch `main` — build + FTP para InfinityFree
+- **Deploy manual:** `scripts/deploy.sh` com lftp
+
+### Chore
+- **`marked` adicionado:** Dependência de build para converter Markdown em HTML
+- **`dist/` removido:** Build antigo deletado (não versionado)
+- **`.gitignore` atualizado:** `public_html/`, `.env.ftp`, `dist/` adicionados
+- **Branch `develop` criada:** Apenas local, sem tracking remoto
+- **AGENTS.md criado:** Instruções para ferramentas AI
+- **Workflow GitHub atualizado:** `main.yml` substituído por `deploy.yml` com InfinityFree
+
 ## v0.1.1 (2026-07-19)
 
 ### Feat

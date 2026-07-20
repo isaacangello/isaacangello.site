@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "exemplo",
+    "file": "exemplo.md",
+    "title": "Como fiz este blog pessoal",
+    "date": "2026-07-20",
+    "tags": [
+      "alpinejs",
+      "vite",
+      "tailwindcss",
+      "javascript"
+    ],
+    "description": "Relato de como construí este blog estático usando Vite, Alpine.js e Tailwind CSS, com posts em Markdown e build automatizado.",
+    "body": "<h2>Motivação</h2>\n<p>Eu precisava de um blog pessoal simples, sem backend, sem banco de dados, mas que fosse fácil de escrever e manter. A solução? Um blog estático com:</p>\n<ul>\n<li><strong>Vite</strong> como bundler (já usado no site)</li>\n<li><strong>Alpine.js</strong> para reatividade no cliente</li>\n<li><strong>Tailwind CSS</strong> para estilização</li>\n<li><strong>Markdown</strong> para os posts</li>\n</ul>\n<h2>Como funciona</h2>\n<h3>Estrutura</h3>\n<pre><code>src/\n├── posts/              # Posts em Markdown\n│   ├── index.json      # Índice gerado automaticamente\n│   └── 2025-01-15-meu-post.md\n├── html/\n│   ├── blog.html       # Listagem de posts\n│   └── post.html       # Template de post individual\nscripts/\n├── new-post.sh         # Script para criar novo post\n└── generate-index.js   # Gera o index.json a partir dos .md\n</code></pre>\n<h3>Fluxo de escrita</h3>\n<ol>\n<li>Rodo <code>./scripts/new-post.sh &quot;Título do Post&quot;</code></li>\n<li>Escrevo o conteúdo em Markdown</li>\n<li>Faço o build (<code>npm run build</code>)</li>\n<li>O script <code>generate-index.js</code> converte tudo para JSON</li>\n<li>O Alpine.js carrega o JSON e renderiza no navegador</li>\n</ol>\n<h3>Roteamento</h3>\n<p>O router do Alpine.js foi estendido para entender duas novas rotas:</p>\n<table>\n<thead>\n<tr>\n<th>Rota</th>\n<th>Função</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>/#/blog</code></td>\n<td>Lista todos os posts</td>\n</tr>\n<tr>\n<td><code>/#/blog/:slug</code></td>\n<td>Exibe o post individual</td>\n</tr>\n</tbody></table>\n<h2>Conclusão</h2>\n<p>Com poucas linhas de código, tenho um blog funcional, rápido e sem depender de serviços externos. O melhor de tudo: escrevo em Markdown e o build cuida do resto.</p>\n"
+  }
+]
