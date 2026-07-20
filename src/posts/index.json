@@ -1,5 +1,14 @@
 [
   {
+    "slug": "tec:post-inaugural",
+    "file": "2026-07-20-tec:post-inaugural.md",
+    "title": "Tec:Post Inaugural",
+    "date": "2026-07-20",
+    "tags": [],
+    "description": "Tec: Seja bem vindo ao meu novo blog! ",
+    "body": "<h1>Tec: Seja bem vindo ao meu novo blog!</h1>\n<p>Bom estou entrando de cabeça no mundo das Ias já a algum tempo, só não tenho o fôlego financeiro do <a href=\"https://github.com/akitaonrails\">Fabio Akita</a> ou do <a href=\"https://github.com/deyvin\">@manodevin</a> que têm uma estabilidade financeira\nmas mesmo assim o conhecimento hoje é barato.<br> \nHoje o &quot;hype&quot; está nos agentes como Claude Code, Open Claw, sobre um regime pesado de token&#39;s \naos quais me faltam renda para bancar, fiquei pensando como posso me aproveitar desse &quot;hype&quot; \nsem gastar o que eu não tenho, pois diferente de outros devs estou sem fonte de renda nesse momento \nduas filhas e apenas muita vontade de programar. <br>Foi ai que descobri o Opencode, e resolvi testar, \na atualmente utilizo em projetos dos mais diversos, e também esse Blog que foi baseado no Blog  <a href=\"https://github.com/akitaonrails/akitaonrails.github.io\">AkitaOnRails</a> — blog pessoal do <a href=\"https://github.com/akitaonrails\">Fabio Akita</a>,\nEntão Resolvi começar a postar coisas por aqui. </p>\n<h2>como vai funcionar o Blog ?</h2>\n<p> Bom sou programador e também gosto de política, e é inevitável que eu poste minhas opiniões sobre política aqui também, pois afinal \n é o meu Blog e acho que eu devo postar o que acho relevante, mas como organizar essas bagunça que é minha cabeça, foi<br> que pensei vou criar uns marcadores para organizar melhor o conteúdo, repare no título principal<br> &quot;Tec: Seja bem vindo ao meu novo blog!&quot; o Tec: é o marcado que eu criei a a princípio posso tratar aqui dois três \nprincipais temas que costumo comentar nas redes sociais que são: </p>\n<ol>\n<li>Tec: Tecnologia</li>\n<li>Pol: Política</li>\n<li>Dev: Desenvolvimento</li>\n<li>Rel: Religião</li>\n<li>Others: qualquer outra coisa que eu ache relevante.</li>\n</ol>\n<p> Vou tentar a princípio fazer um post por semana, até me acostumar, e mais para frente vejo como fica, valeu!!</p>\n"
+  },
+  {
     "slug": "exemplo",
     "file": "exemplo.md",
     "title": "Como fiz este blog pessoal",
