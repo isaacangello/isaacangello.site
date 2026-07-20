@@ -181,6 +181,18 @@
   color: #d97706;
   text-decoration: underline;
 }
+.post-content del {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+.post-content input[type="checkbox"] {
+  margin-right: 0.5rem;
+  accent-color: #d97706;
+}
+.post-content ul:has(input[type="checkbox"]) {
+  list-style: none;
+  padding-left: 0;
+}
 @theme{
     --font-helvetica: Helvetica , 'Helvetica Light', verdana;
     --font-helvetica-light: 'Helvetica Light', Helvetica ,  verdana;

@@ -5,6 +5,8 @@ import { readdirSync, readFileSync, writeFileSync, existsSync } from 'fs'
 import { join, resolve } from 'path'
 import { marked } from 'marked'
 
+marked.use({ gfm: true, breaks: true })
+
 const postsDir = resolve(process.argv[2] || 'src/posts')
 const outFile = join(postsDir, 'index.json')
 
