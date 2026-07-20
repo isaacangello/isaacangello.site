@@ -42,10 +42,12 @@ Alpine.store('router', {
     const route = this.routes[page];
     if (!route) return;
     try {
-      const resp = await fetch('./src/html/' + route.file);
+      const file = (page === 'blog' && this.currentPost) ? 'post.html' : route.file;
+      const resp = await fetch('./src/html/' + file);
       const html = await resp.text();
       document.getElementById('app').innerHTML = html;
-      document.title = route.title;
+      const titleSuffix = this.currentPost ? ' - Isaac Castro' : '';
+      document.title = this.currentPost ? route.title + titleSuffix : route.title;
       if (page === 'blog') {
         await this.loadPosts();
       }
