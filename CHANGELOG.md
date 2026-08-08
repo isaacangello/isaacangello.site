@@ -1,5 +1,19 @@
 # Changelog
 
+## v0.4.0 (2026-08-08)
+
+### Feat
+- **Navegação indexável sem hash:** Router extraído para o pacote `router-maverik` (publicado no npm) — URLs limpas `/blog/:slug` no lugar de `/#/blog/:slug`
+- **Meta dinâmica por rota:** `document.title`, description, Open Graph e canonical atualizados a cada navegação (posts com título próprio)
+- **`.htaccess`:** reescrita de rotas inexistentes para `index.html` no InfinityFree (copiado via `public/.htaccess`)
+- **Migração de hash legada:** `router.start()` converte `#/rota` → `/rota` automaticamente no cliente
+- **Store `blog` separada:** dados de posts saem do router para `Alpine.store('blog')`
+
+### Chore
+- **`router-maverik` adicionado:** dependência publicada (v0.1.0)
+- **`base: '/'`** no Vite: assets absolutos, necessários para URLs aninhadas
+- **Docs atualizadas:** README e AGENTS.md com as novas rotas
+
 ## v0.3.0 (2026-08-07)
 
 ### Feat

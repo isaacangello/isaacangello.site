@@ -1,0 +1,10 @@
+Options -MultiViews
+RewriteEngine On
+
+# Arquivos e diretorios reais sao servidos diretamente
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# URLs limpas do router-maverik: encaminha rotas inexistentes para index.html
+RewriteRule . index.html [L]

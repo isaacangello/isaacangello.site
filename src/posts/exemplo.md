@@ -41,12 +41,12 @@ scripts/
 
 ### Roteamento
 
-O router do Alpine.js foi estendido para entender duas novas rotas:
+O router (`router-maverik`) entende duas rotas com URLs limpas:
 
 | Rota | Função |
 |------|--------|
-| `/#/blog` | Lista todos os posts |
-| `/#/blog/:slug` | Exibe o post individual |
+| `/blog` | Lista todos os posts |
+| `/blog/:slug` | Exibe o post individual |
 
 ## Conclusão
 

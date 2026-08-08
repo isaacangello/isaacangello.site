@@ -18,17 +18,23 @@ Stack: Vite 5, Alpine.js 3, Tailwind CSS 4, Animate.css
 - CLI: `markdown-maverik build` / `markdown-maverik new "Title" --prefix <code>` / `markdown-maverik prefixes`
 - Build runs automatically in `npm run build` (vite plugin `generate-blog-index`)
 
+## Router
+- Powered by `router-maverik` (npm) — History API, clean indexable URLs (no hash)
+- Setup in `main.js`: `createRouter` + `installAlpine(Alpine, 'router', router)`
+- Server rewrites unknown paths to `index.html` via `public/.htaccess`
+- Legacy `#/route` links are auto-converted by `router.start()` (client-side)
+
 ## Branches
 - `main` — production (auto-deploy via GitHub Actions on push)
 - `develop` — local development only (no remote tracking)
 
 ## SPA Routes
-- `/#/home` — home (default)
-- `/#/blog` — blog listing
-- `/#/blog/:slug` — individual post
-- `/#/curriculo` — resume
-- `/#/projetos` — projects
-- `/#/contato` — contact
+- `/` — home (default)
+- `/blog` — blog listing
+- `/blog/:slug` — individual post
+- `/curriculo` — resume
+- `/projetos` — projects
+- `/contato` — contact
 
 ## GitHub Secrets (deploy)
 - `INFINITY_FREE_HOST`, `INFINITY_FREE_USER`, `INFINITY_FREE_PASSWORD`

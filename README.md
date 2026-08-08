@@ -28,14 +28,18 @@ public_html/        # Build output (Vite)
 
 ## Rotas
 
+Roteamento com URLs limpas e indexáveis via **`router-maverik`** (History API, sem hash).
+
 | URL | Página |
 |-----|--------|
-| `/#/home` | Home (default) |
-| `/#/blog` | Blog |
-| `/#/blog/:slug` | Post individual |
-| `/#/curriculo` | Currículo |
-| `/#/projetos` | Projetos |
-| `/#/contato` | Contato |
+| `/` | Home (default) |
+| `/blog` | Blog |
+| `/blog/:slug` | Post individual |
+| `/curriculo` | Currículo |
+| `/projetos` | Projetos |
+| `/contato` | Contato |
+
+O servidor reescreve rotas inexistentes para `index.html` via `public/.htaccess` (copiado para `public_html/` no build).
 
 ## Scripts
 
@@ -49,6 +53,8 @@ npm run post:new "Título"            # Atalho npm para criar novo post
 ```
 
 > O motor de blog é o pacote **`markdown-maverik`** — veja o [README no npm](https://www.npmjs.com/package/markdown-maverik).
+
+> O roteamento é o pacote **`router-maverik`** — veja o [README no npm](https://www.npmjs.com/package/router-maverik).
 
 > [📝 Documentação completa do blog →](BLOG.md)
 

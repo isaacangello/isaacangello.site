@@ -48,7 +48,7 @@ export default defineConfig({
       }
     }
   ],
-  base: './',
+  base: '/',
   build: {
     outDir:'public_html',
     chunkSizeWarningLimit: 1024

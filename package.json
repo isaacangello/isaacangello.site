@@ -19,6 +19,7 @@
     "@tailwindcss/vite": "^4.1.10",
     "alpinejs": "^3.13.5",
     "animate.css": "^4.1.1",
+    "router-maverik": "^0.1.0",
     "tailwindcss": "^4.1.10"
   }
 }

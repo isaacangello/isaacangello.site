@@ -59,7 +59,7 @@ Conteúdo do post em **Markdown**...
 ## Como funciona
 
 1. **Build**: ao rodar `npm run build` (ou `npm run post:build`), o pacote `markdown-maverik` lê todos `.md` de `src/posts/`, converte o body para HTML com `marked` (GFM), extrai o frontmatter e gera `src/posts/index.json`
-2. **Runtime**: o Alpine.js carrega o `index.json` e renderiza a listagem (`/#/blog`) ou o post individual (`/#/blog/:slug`)
+2. **Runtime**: o Alpine.js carrega o `index.json` e renderiza a listagem (`/blog`) ou o post individual (`/blog/:slug`) via `router-maverik` (URLs limpas, sem hash)
 3. **Slug**: extraído do nome do arquivo removendo o prefixo de data e a extensão `.md`
 
 Exemplo: `2026-07-20-hello-world.md` → slug: `hello-world`
@@ -68,5 +68,5 @@ Exemplo: `2026-07-20-hello-world.md` → slug: `hello-world`
 
 | URL | Página |
 |-----|--------|
-| `/#/blog` | Lista cronológica de posts |
-| `/#/blog/:slug` | Post individual |
+| `/blog` | Lista cronológica de posts |
+| `/blog/:slug` | Post individual |
