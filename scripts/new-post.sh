@@ -1,29 +1,11 @@
 #!/bin/sh
-# new-post.sh — Cria um novo post no blog
-# Uso: ./scripts/new-post.sh "Título do Post"
+# new-post.sh — Cria um novo post no blog via markdown-maverik
+# Uso: ./scripts/new-post.sh "Título do Post" [--prefix tec]
+#      ./scripts/new-post.sh "Título" --prefix dev --tags laravel,php
 
 set -e
 
-if [ $# -eq 0 ]; then
-  echo "Uso: $0 \"Título do Post\""
-  exit 1
-fi
+SCRIPT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$SCRIPT_DIR"
 
-TITLE="$*"
-DATE=$(date +%Y-%m-%d)
-SLUG=$(echo "$TITLE" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/-/g' | sed 's/--*/-/g' | sed 's/^-//;s/-$//')
-FILENAME="${DATE}-${SLUG}.md"
-POSTS_DIR="$(dirname "$0")/../src/posts"
-
-cat > "$POSTS_DIR/$FILENAME" <<EOF
----
-title: "$TITLE"
-date: $DATE
-tags: []
-description: "Breve descrição do post"
----
-
-Escreva seu conteúdo em **Markdown** aqui...
-EOF
-
-echo "Criado: src/posts/$FILENAME"
+exec npx --no-install markdown-maverik new "$@"

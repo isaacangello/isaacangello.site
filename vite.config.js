@@ -41,9 +41,9 @@ export default defineConfig({
       name: 'generate-blog-index',
       buildStart() {
         try {
-          execSync('node scripts/generate-index.js', { stdio: 'inherit' })
+          execSync('npx --no-install markdown-maverik build', { stdio: 'inherit' })
         } catch (e) {
-          console.warn('generate-index.js falhou (pode ser primeira exec sem posts)')
+          console.warn('markdown-maverik build falhou (rode npm install antes)')
         }
       }
     }

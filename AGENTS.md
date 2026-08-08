@@ -8,9 +8,15 @@ Stack: Vite 5, Alpine.js 3, Tailwind CSS 4, Animate.css
 - `npm run preview` — preview production build
 
 ## Scripts
-- `./scripts/new-post.sh "Title"` — create new blog post
-- `./scripts/generate-index.js` — regenerate blog index.json
+- `./scripts/new-post.sh "Title"` — create new blog post (markdown-maverik new)
+- `npm run post:build` — regenerate blog index.json (markdown-maverik build)
+- `npm run post:new "Title"` — npm shortcut to create a new post
 - `./scripts/deploy.sh` — manual FTP deploy
+
+## Blog engine
+- Powered by `markdown-maverik` (npm) — config in `markdown-maverik.config.js`
+- CLI: `markdown-maverik build` / `markdown-maverik new "Title" --prefix <code>` / `markdown-maverik prefixes`
+- Build runs automatically in `npm run build` (vite plugin `generate-blog-index`)
 
 ## Branches
 - `main` — production (auto-deploy via GitHub Actions on push)

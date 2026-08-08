@@ -26,9 +26,9 @@ src/
 ├── html/
 │   ├── blog.html       # Listagem de posts
 │   └── post.html       # Template de post individual
+markdown-maverik.config.js  # Config do motor (dir, out, marcadores)
 scripts/
-├── new-post.sh         # Script para criar novo post
-└── generate-index.js   # Gera o index.json a partir dos .md
+└── new-post.sh         # Wrapper do markdown-maverik new
 ```
 
 ### Fluxo de escrita
@@ -36,7 +36,7 @@ scripts/
 1. Rodo `./scripts/new-post.sh "Título do Post"`
 2. Escrevo o conteúdo em Markdown
 3. Faço o build (`npm run build`)
-4. O script `generate-index.js` converte tudo para JSON
+4. O pacote `markdown-maverik` converte tudo para JSON
 5. O Alpine.js carrega o JSON e renderiza no navegador
 
 ### Roteamento

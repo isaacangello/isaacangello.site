@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.3.0 (2026-08-07)
+
+### Feat
+- **Motor de blog extraído para pacote `markdown-maverik`:** A tecnologia de posts em Markdown foi isolada e publicada no npm — o `isaacangello` agora consome o pacote (`scripts/generate-index.js` removido, `scripts/new-post.sh` vira wrapper do CLI)
+- **Config `markdown-maverik.config.js`:** `dir: src/posts`, `out: src/posts/index.json`, marcadores de categoria (tec, pol, dev, rel, others)
+- **Scripts npm:** `post:build` (regenera o index.json) e `post:new` (cria post via CLI)
+- **GFM no build:** tabelas, task lists, strikethrough, autolinks e filtro de HTML desautorizado (§6.11 do GFM)
+- **Prefixos no `index.json`:** o post inaugural `tec:` agora tem `prefix: { code: 'tec', label: 'Tec', name: 'Tecnologia' }` resolvido automaticamente
+
+### Chore
+- **`marked` removido:** dependência direta substituída pelo `markdown-maverik`
+- **Docs atualizadas:** README, BLOG.md e AGENTS.md refletem o novo motor
+
 ## v0.2.0 (2026-07-20)
 
 ### Feat

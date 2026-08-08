@@ -21,7 +21,8 @@ src/
 ├── fonts/          # Fontes locais (Work Sans, DIN Next, Helvetica)
 ├── img/            # Imagens (screenshots de projetos, avatar)
 └── posts/          # Posts do blog (Markdown)
-scripts/            # Scripts CLI (new-post.sh, generate-index.js)
+markdown-maverik.config.js   # Config do motor de blog (markdown-maverik)
+scripts/            # Scripts CLI (new-post.sh, deploy.sh)
 public_html/        # Build output (Vite)
 ```
 
@@ -41,9 +42,13 @@ public_html/        # Build output (Vite)
 ```bash
 npm run dev                          # Servidor de desenvolvimento
 npm run build                        # Build para produção (saída em public_html/)
-./scripts/new-post.sh "Título"       # Criar novo post no blog
+./scripts/new-post.sh "Título"       # Criar novo post no blog (markdown-maverik new)
+npm run post:build                   # Regenera o src/posts/index.json
+npm run post:new "Título"            # Atalho npm para criar novo post
 ./scripts/deploy.sh                  # Deploy manual via FTP
 ```
+
+> O motor de blog é o pacote **`markdown-maverik`** — veja o [README no npm](https://www.npmjs.com/package/markdown-maverik).
 
 > [📝 Documentação completa do blog →](BLOG.md)
 

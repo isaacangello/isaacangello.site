@@ -18,6 +18,18 @@ O nome do arquivo é gerado automaticamente:
 
 Você pode renomear o arquivo depois se quiser um slug diferente. Ex: `2026-07-20-como-fiz-o-blog.md`.
 
+Com prefixo de categoria (marcador tipo `Tec:`):
+
+```bash
+./scripts/new-post.sh "Post Inaugural" --prefix tec
+```
+
+Gera `src/posts/2026-07-20-tec-post-inaugural.md` com `title: "Tec: Post Inaugural"` e `prefix: tec` no frontmatter. Lista os marcadores configurados:
+
+```bash
+npx markdown-maverik prefixes
+```
+
 ## Frontmatter
 
 Todo post começa com frontmatter no formato YAML entre `---`:
@@ -28,6 +40,7 @@ title: "Meu Post"
 date: 2026-07-20
 tags: [laravel, php, alpinejs]
 description: "Descrição curta que aparece na listagem"
+prefix: tec
 ---
 
 Conteúdo do post em **Markdown**...
@@ -41,10 +54,11 @@ Conteúdo do post em **Markdown**...
 | `date` | Sim | Data no formato `YYYY-MM-DD` |
 | `tags` | Não | Lista de tags (array) |
 | `description` | Não | Resumo exibido nos cards da listagem |
+| `prefix` | Não | Código do marcador de categoria (tec, pol, dev, rel, others) |
 
 ## Como funciona
 
-1. **Build**: ao rodar `npm run build`, o script `scripts/generate-index.js` lê todos `.md` de `src/posts/`, converte o body para HTML com `marked`, extrai o frontmatter e gera `src/posts/index.json`
+1. **Build**: ao rodar `npm run build` (ou `npm run post:build`), o pacote `markdown-maverik` lê todos `.md` de `src/posts/`, converte o body para HTML com `marked` (GFM), extrai o frontmatter e gera `src/posts/index.json`
 2. **Runtime**: o Alpine.js carrega o `index.json` e renderiza a listagem (`/#/blog`) ou o post individual (`/#/blog/:slug`)
 3. **Slug**: extraído do nome do arquivo removendo o prefixo de data e a extensão `.md`
 
