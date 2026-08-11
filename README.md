@@ -62,10 +62,10 @@ npm run post:new "Título"            # Atalho npm para criar novo post
 
 | Método | Gatilho | Destino |
 |--------|---------|---------|
-| **Automático** | Push na branch `main` (GitHub Actions) | InfinityFree via FTP |
-| **Manual** | `./scripts/deploy.sh` | InfinityFree via lftp |
+| **Automático** | Push na branch `main` (GitHub Actions) | InfinityFree + 50webs via FTP |
+| **Manual** | `./scripts/deploy.sh [infinityfree\|50webs\|all]` | InfinityFree ou 50webs via lftp |
 
-**Secrets do GitHub:** `INFINITY_FREE_HOST`, `INFINITY_FREE_USER`, `INFINITY_FREE_PASSWORD`
+**Secrets do GitHub:** `INFINITY_FREE_HOST`, `INFINITY_FREE_USER`, `INFINITY_FREE_PASSWORD` (InfinityFree) e `FTP_HOST`, `FTP_USERNAME`, `FTP_PASSWORD` (50webs)
 
 ## Projetos em Destaque
 

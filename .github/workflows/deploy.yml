@@ -3,7 +3,7 @@ on:
     branches:
       - main
 
-name: Deploy to InfinityFree
+name: Deploy to InfinityFree + 50webs
 
 jobs:
   web-deploy:
@@ -25,7 +25,7 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: FTP Deploy
+      - name: FTP Deploy — InfinityFree
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.INFINITY_FREE_HOST }}
@@ -33,4 +33,14 @@ jobs:
           password: ${{ secrets.INFINITY_FREE_PASSWORD }}
           local-dir: ./public_html/
           server-dir: /htdocs/
+          dangerous-clean-skip: true
+
+      - name: FTP Deploy — 50webs
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./public_html/
+          server-dir: /isaacangelo.50webs.com/
           dangerous-clean-skip: true

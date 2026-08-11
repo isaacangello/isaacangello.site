@@ -11,7 +11,7 @@ Stack: Vite 5, Alpine.js 3, Tailwind CSS 4, Animate.css
 - `./scripts/new-post.sh "Title"` — create new blog post (markdown-maverik new)
 - `npm run post:build` — regenerate blog index.json (markdown-maverik build)
 - `npm run post:new "Title"` — npm shortcut to create a new post
-- `./scripts/deploy.sh` — manual FTP deploy
+- `./scripts/deploy.sh [infinityfree|50webs|all]` — manual FTP deploy (default: infinityfree)
 
 ## Blog engine
 - Powered by `markdown-maverik` (npm) — config in `markdown-maverik.config.js`
@@ -37,4 +37,5 @@ Stack: Vite 5, Alpine.js 3, Tailwind CSS 4, Animate.css
 - `/contato` — contact
 
 ## GitHub Secrets (deploy)
-- `INFINITY_FREE_HOST`, `INFINITY_FREE_USER`, `INFINITY_FREE_PASSWORD`
+- `INFINITY_FREE_HOST`, `INFINITY_FREE_USER`, `INFINITY_FREE_PASSWORD` — InfinityFree
+- `FTP_HOST`, `FTP_USERNAME`, `FTP_PASSWORD` — 50webs

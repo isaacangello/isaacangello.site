@@ -20,6 +20,9 @@ public_html
 .env.production
 .env.staging
 
+# Configuração FTP (FileZilla) — contém credenciais
+isaacangelo.xml
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

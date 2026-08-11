@@ -6,7 +6,7 @@ import { installAlpine } from 'router-maverik/alpine';
 
 window.Alpine = Alpine;
 
-const SITE_URL = 'https://isaacangello.free.nf';
+const SITE_URL = 'http://isaacangelo.50webs.com';
 
 const PAGE_TITLES = {
   home: 'Isaac Castro Dev',
