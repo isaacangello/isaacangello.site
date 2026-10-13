@@ -11,13 +11,14 @@ Stack: Vite 5, Alpine.js 3, Tailwind CSS 4, Animate.css
 - `./scripts/new-post.sh "Title" [--prefix <code>]` — create new blog post (markdown-maverik new); asks for prefix interactively if omitted, validates `--prefix` against config
 - `./scripts/new-post.sh prefixes` — list configured prefixes
 - `./scripts/new-post.sh build` — regenerate blog index.json (same as `npm run post:build`)
+- `./scripts/new-post.sh remove [target]` (alias `rm`) — remove post: lists numbered posts if no target, confirms before deleting, auto-rebuilds index.json
 - `npm run post:build` — regenerate blog index.json (markdown-maverik build)
 - `npm run post:new "Title"` — npm shortcut to create a new post
 - `./scripts/deploy.sh [infinityfree|50webs|all]` — manual FTP deploy (default: infinityfree)
 
 ## Blog engine
 - Powered by `markdown-maverik` (npm) — config in `markdown-maverik.config.js`
-- CLI: `markdown-maverik build` / `markdown-maverik new "Title" --prefix <code>` / `markdown-maverik prefixes`
+- CLI: `markdown-maverik build` / `markdown-maverik new "Title" --prefix <code>` / `markdown-maverik remove <file|slug>` / `markdown-maverik prefixes`
 - Build runs automatically in `npm run build` (vite plugin `generate-blog-index`)
 
 ## Router
