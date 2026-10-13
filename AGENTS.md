@@ -8,7 +8,9 @@ Stack: Vite 5, Alpine.js 3, Tailwind CSS 4, Animate.css
 - `npm run preview` — preview production build
 
 ## Scripts
-- `./scripts/new-post.sh "Title"` — create new blog post (markdown-maverik new)
+- `./scripts/new-post.sh "Title" [--prefix <code>]` — create new blog post (markdown-maverik new); asks for prefix interactively if omitted, validates `--prefix` against config
+- `./scripts/new-post.sh prefixes` — list configured prefixes
+- `./scripts/new-post.sh build` — regenerate blog index.json (same as `npm run post:build`)
 - `npm run post:build` — regenerate blog index.json (markdown-maverik build)
 - `npm run post:new "Title"` — npm shortcut to create a new post
 - `./scripts/deploy.sh [infinityfree|50webs|all]` — manual FTP deploy (default: infinityfree)
